@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+		<title>Solar system</title>
+		<meta charset="UTF-8">
+	<style>
+	body {
+		margin: 0;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: url('galaxy.jpeg') no-repeat center center fixed;
+		background-size: cover;
+		overflow: hidden;
+}
+	.container {
+		font-size: 20px;
+		width: 40em;
+		height: 40em;
+		position: relative;
+}
+	#sun {
+		position: absolute;
+		top: 15em; 
+		left: 15em;
+		width: 10em; 
+		height: 10em;
+		background: url(sun.png)no-repeat center center fixed;
+		border-radius: 50%;
+		box-shadow: 0 0 5em white;
+		animation: sun 15s linear 0s infinite;
+}
+
+	@keyframes sun{
+		0%{ background-position: 45% 50% }
+		100%{ background-position: 55% 50% }
+}
+	#earth::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 2.8em;
+		right: 2.8em;
+		width: 3em;
+		height: 3em;
+		background: url(earth.png)no-repeat center center fixed;
+}
+
+	#earth {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: 5em;
+		left: 5em;
+		width: 30em;
+		height: 30em;
+		animation: orbit 36.5s linear infinite;
+}
+	@keyframes orbit {
+		to {
+			transform: rotate(360deg);
+}
+
+}
+	#moon::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 0.8em;
+		right: 0.2em;
+		width: 1.2em;
+		height: 1.2em;
+		background: url(moon.png)no-repeat center center fixed;
+}
+	#moon {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: 0;
+		right: 0;
+		width: 8em;
+		height: 8em;
+		animation: orbit 2.7s linear infinite;
+}	
+	#mercury::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 1.4em;
+		right: 1.4em;
+		width: 1.5em;
+		height: 1.5em;
+		background: url(mercury.png)no-repeat center center fixed;
+}
+
+	#mercury {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: 12.5em;
+		left: 12.5em;
+		width: 15em;
+		height: 15em;
+		animation: orbit 22.7s linear infinite;
+}
+
+	#venus::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 2.0em;
+		right: 2.0em;
+		width: 2.0em;
+		height: 2.0em;
+		background: url(venus.png)no-repeat center center fixed;
+}
+
+	#venus {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: 10em;
+		left: 10em;
+		width: 20em;
+		height: 20em;
+		animation: orbit 31.07s linear infinite;
+}
+		
+	#mars::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 5em; /*csóva helye x*/
+		right: 6em; /* csóva helye y*/
+		width: 2.3em; /* bolygó mérete - x*/
+		height: 2.3em; /* bolygó mérete - y*/
+		background: url(mars.png)no-repeat center center fixed;
+}
+
+	#mars {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: -3em; /*pálya centruma x*/
+		left: -3em; /*pálya centruma y*/
+		width: 45em; /*pálya átmérője x*/
+		height: 45em; /*pálya átmérője y*/
+		animation: orbit 45.13s linear infinite;
+}
+
+	#jupiter::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 6.0em; /*csóva helye x*/
+		right: 6.2em; /* csóva helye y*/
+		width: 5em; /* bolygó mérete - x*/
+		height: 5em; /* bolygó mérete - y*/
+		background: url(jupiter.png)no-repeat center center fixed;
+}
+
+	#jupiter {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: -10em; /*pálya centruma x*/
+		left: -10em; /*pálya centruma y*/
+		width: 60em; /*pálya átmérője x*/
+		height: 60em; /*pálya átmérője y*/
+		animation: orbit 83s linear infinite;
+}
+
+	#saturn::before{
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 8.8em; 
+		right: 7.8em;
+		width: 4.8em;
+		height: 4.8em;
+		background: url(saturn.png)no-repeat center center fixed;
+	}
+
+	#saturn {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: -16em;
+		left: -16em;
+		width: 72em;
+		height: 72em;
+		animation: orbit 11.76s linear infinite;
+	}
+
+	#uranus::before{
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 10.3em;
+		right: 10.3em; 
+		width: 4em;
+		height: 4em;
+		background: url(uranus.png)no-repeat center center fixed;
+	}
+
+	#uranus {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: -22em;
+		left: -22em;
+		width: 84em;
+		height: 84em;
+		animation: orbit 7.4s linear infinite;
+	}
+
+	#neptune::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 12em;
+		right: 12em;
+		width: 3.8em;
+		height: 3.8em;
+		background: url(neptune.png)no-repeat center center fixed;
+}
+
+	#neptune {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: -28.15em;
+		left: -28.15em;
+		width: 96em;
+		height: 96em;
+		animation: orbit 201.4s linear infinite;
+}
+
+	#pluto::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 15.52em;
+		right: 15.52em;
+		width: 0.5em;
+		height: 0.5em;
+		background: url(pluto.png)no-repeat center center fixed;
+}
+
+	#pluto {
+		position: absolute;
+		border-style: solid;
+		border-color: white transparent transparent transparent;
+		border-width: 0.1em 0.1em 0 0;
+		border-radius: 50%;
+		top: -34em;
+		left: -34em;
+		width: 108em;
+		height: 108em;
+		animation: orbit 231.4s linear infinite;
+}
+
+	.hidden {
+		display: none;
+	}
+
+	.visible {
+		display: block;
+	}
+
+	#surprise {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+	}
+
+	#neil_button {
+		background-color: transparent;
+		border: none;
+		color: aqua;
+		font-size: 200%;
+		height: 5em;
+		padding: 0%;
+		width: 20em;
+	}
+
+
+	</style>
+	<body>
+		<div class="container" id="surprise">
+			<div>
+				<button type="button" id="neil_button">Kattints ide a meglepetésért!</button>
+				<p class="hidden" id="neil"><img src="neil1.png" alt="Neil DeGrasse"></p>
+			</div>
+		</div>
+		<div class="container">
+			<div id="sun"></div>
+			<div id="mercury"></div>
+			<div id="venus"></div>
+			<div id="earth">
+				<div id="moon"></div>
+			</div>
+			<div id="mars"></div>
+			<div id="jupiter"></div>
+			<div id="saturn"></div>
+			<div id="uranus"></div>
+			<div id="neptune"></div>
+			<div id="pluto"></div>
+		</div>
+		<script src="index.js"></script>
+	</body>	
+</html>
